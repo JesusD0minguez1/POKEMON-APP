@@ -1,0 +1,12 @@
+<div *ngIf="pokemon" class="pokemon-box">
+    <h2>{{pokemon.name}} {{pokemon.id}}</h2>
+    <img src="{{pokemon.img}}" alt="{{pokemon.name}}"/>
+    <img src="{{pokemon.ShinyImageUrl}}" alt="{{pokemon.name}} shiny"/>
+    <ul>
+        <li *ngFor="let ability of pokemon.abilities">{{ability.ability.name}}</li>
+    </ul>
+    <h2>Moves</h2>
+    <ul>
+        <li *ngFor="let move of pokemon.moves">{{move.move.name}}</li>
+    </ul>
+</div>

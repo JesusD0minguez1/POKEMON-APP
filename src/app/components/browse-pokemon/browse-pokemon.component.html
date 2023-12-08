@@ -1,0 +1,9 @@
+<h2>pokemon Browser</h2>
+<button [disabled]="prev==null" (click)="prevClick()">prev</button>
+<button [disabled]="next==null" (click)="nextClick()">next</button>
+
+<ul>
+    <li *ngFor="let pokemon of pokemonList">
+        <a routerLink="/pokemon/{{pokemon.id}}">{{pokemon.name}}</a>
+    </li>
+</ul>
